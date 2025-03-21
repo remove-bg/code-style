@@ -48,6 +48,9 @@ Metrics/ClassLength:
 Bundler/OrderedGems:
   Enabled: false
 
+Performance/TimesMap:
+  Enabled: false
+
 Style/SpecialGlobalVars:
   Exclude:
     - Dangerfile
