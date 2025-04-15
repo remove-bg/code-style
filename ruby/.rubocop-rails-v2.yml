@@ -4,7 +4,7 @@ require:
   - rubocop-rspec
 
 inherit_from:
-  - https://raw.githubusercontent.com/remove-bg/code-style/main/ruby/.rubocop.yml
+  - https://raw.githubusercontent.com/remove-bg/code-style/moritznossek-update-rubocop/ruby/.rubocop-v2.yml
 
 AllCops:
   Exclude:
