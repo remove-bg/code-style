@@ -1,0 +1,64 @@
+require:
+  - rubocop-performance
+
+AllCops:
+  DisplayStyleGuide: true
+  ExtraDetails: true
+  TargetRubyVersion: ~
+  Exclude:
+    - bin/**/*
+    - config/**/*
+    - script/**/*
+    - vendor/**/*
+    - node_modules/**/*
+    - tmp/**/*
+    - config.ru
+  NewCops: enable
+  RubyInterpreters:
+    - ruby
+
+# Check with yard instead.
+Style/Documentation:
+  Enabled: false
+
+Style/StringLiterals:
+  EnforcedStyle: double_quotes
+
+Style/RaiseArgs:
+  Enabled: false
+
+Style/TrailingCommaInArrayLiteral:
+  EnforcedStyleForMultiline: comma
+
+Style/TrailingCommaInHashLiteral:
+  EnforcedStyleForMultiline: comma
+
+Style/TrailingCommaInArguments:
+  Enabled: false
+
+Metrics/MethodLength:
+  Max: 20
+
+Metrics/AbcSize:
+  Enabled: false
+
+Metrics/ClassLength:
+  Max: 180
+
+Bundler/OrderedGems:
+  Enabled: false
+
+Performance/TimesMap:
+  Enabled: false
+
+Style/SpecialGlobalVars:
+  Exclude:
+    - Dangerfile
+
+Layout/LineLength:
+  Exclude:
+    - Dangerfile
+
+Style/SignalException:
+  Exclude:
+    - Dangerfile

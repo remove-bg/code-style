@@ -1,0 +1,57 @@
+require:
+  - rubocop-performance
+  - rubocop-rails
+  - rubocop-rspec
+
+inherit_from:
+  - https://raw.githubusercontent.com/remove-bg/code-style/main/ruby/.rubocop.yml
+
+AllCops:
+  Exclude:
+    - bin/**/*
+    - db/**/*
+    - db/*
+    - config/**/*
+    - script/**/*
+    - bin/{rails,rake}
+    - vendor/**/*
+    - node_modules/**/*
+    - tmp/**/*
+    - config.ru
+  RubyInterpreters:
+    - ruby
+    - rake
+
+Rails:
+  Enabled: true
+
+Metrics/BlockLength:
+  Exclude:
+    - spec/**/*
+    - lib/tasks/**/*
+    - Dangerfile
+
+RSpec/DescribeClass:
+  Enabled: false
+
+RSpec/MultipleExpectations:
+  Max: 15
+
+RSpec/ExampleLength:
+  Max: 45
+
+Naming/MethodParameterName:
+  Exclude:
+    - spec/**/*
+
+Style/SpecialGlobalVars:
+  Exclude:
+    - Dangerfile
+
+Layout/LineLength:
+  Exclude:
+    - Dangerfile
+
+Style/SignalException:
+  Exclude:
+    - Dangerfile
